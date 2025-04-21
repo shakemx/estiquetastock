@@ -1,0 +1,361 @@
+//--------------------------
+// BASE STYLES
+//--------------------------
+
+$primary: #02b5ff;
+$secondary: #e6f4f1;
+$tertiary: #bba5b0;
+$accent: #eee8a9;
+$text: #555555;
+$text-light: #e8e8e8;
+$background: #faf8ff;
+$background-light: #fff;
+$background-dark: #0055b2;
+@font-face {
+  font-family: "Lato-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../lato-regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../lato-regular.woff2) format("woff2");
+}
+
+body {
+  font-family: "Lato-Regular", sans-serif;
+  overflow-x: hidden;
+  background-color: $background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+h1,
+h2,
+h3 {
+  font-family: "Lato-Bold", sans-serif;
+  color: $text;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Lato-Regular", sans-serif;
+  color: $text;
+}
+
+p {
+  font-family: "Lato-Light", sans-serif;
+  color: $text;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  background-color: $background-dark;
+  color: $accent;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-radius: 5px;
+  &:hover {
+    color: darken($text-light, 10%);
+  }
+}
+
+ul {
+    list-style: none;
+  }
+
+.bg-primary {
+  background-color: $primary !important;
+  color: $text-light;
+}
+
+@media (max-width: 768px) {
+  a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+//----------------------------
+// SECTIONS
+//----------------------------
+
+//-----------------
+// Navbar
+//-----------------
+
+
+.bg-nav {
+  background-color: rgba($color: $secondary, $alpha: 0.8);
+}
+.img-nav {
+  height: 100px;
+  background-color: none !important;
+}
+
+
+.nav-link {
+  font-size: x-large;
+  color: $primary !important;
+  margin-left: 13rem;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 45%);
+  width: fit-content;
+  background-color: transparent !important;
+}
+
+.menuShow {
+  border-color: transparent !important;
+  border: none !important;
+  background-image: url("../images/open.png") !important;
+  -webkit-animation: menu-show 0.5s ease 0s 1 !important;
+  animation: menu-show 0.5s ease 0s 1 !important;
+  animation-fill-mode: forwards !important;
+}
+
+@keyframes menu-show {
+  to {
+    background-image: url("../images/open.png") !important;
+    opacity: 1;
+  }
+  from {
+    background-image: url("../images/close.png") !important;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes menu-show {
+  to {
+    background-image: url("../images/open.png") !important;
+    opacity: 1;
+  }
+  from {
+    background-image: url("../images/close.png") !important;
+    opacity: 0;
+  }
+}
+
+.menuHide {
+  border-color: transparent !important;
+  border: none !important;
+  background-image: url("../images/close.png") !important;
+  -webkit-animation: menu-hide 0.5s ease 0s 1 !important;
+  animation: menu-hide 0.5s ease 0s 1 !important;
+  animation-fill-mode: forwards !important;
+}
+
+@keyframes menu-hide {
+  to {
+    background-image: url("../images/close.png") !important;
+    opacity: 1;
+  }
+  from {
+    background-image: url("../images/open.png") !important;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes menu-hide {
+  to {
+    background-image: url("../images/close.png") !important;
+    opacity: 1;
+  }
+  from {
+    background-image: url("../images/open.png") !important;
+    opacity: 0;
+  }
+}
+
+.navbar-brand {
+  background-color: transparent !important;
+}
+
+.navbar-nav{
+margin: auto;
+ padding: 0;
+} 
+
+.navbar-light .navbar-toggler {
+  color: transparent !important;
+  border-color: transparent !important;
+  border: none !important;
+  z-index: 9999;
+}
+
+.navbar-toggler:focus {
+  border-color: transparent !important;
+  border: none !important;
+  box-shadow: transparent !important;
+}
+
+.showNav {
+  -webkit-animation: collapser-show 0.5s ease-in-out 0s 1;
+  animation: collapser-show 0.5s ease-in-out 0s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes collapser-show {
+  to {
+    height: 0%;
+  }
+  from {
+    height: 100%;
+  }
+}
+@-webkit-keyframes collapser-show {
+  to {
+    height: 0%;
+  }
+  from {
+    height: 100%;
+  }
+}
+
+.hideNav {
+  -webkit-animation: collapser-hide 0.5s ease 0s 1 normal;
+  animation: collapser-hide 0.5s ease 0s 1 normal;
+  animation-fill-mode: forwards;
+  backdrop-filter:saturate(180%) blur(20px);
+}
+
+@keyframes collapser-hide {
+  to {
+    height: 100%;
+  }
+  from {
+    height: 0%;
+  }
+}
+@-webkit-keyframes collapser-hide {
+  to {
+    height: 100%;
+  }
+  from {
+    height: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+      font-size: large;
+      margin-left: 1rem;
+      padding: 0.3rem 1rem;
+    }
+    .img-nav {
+      height: 60px;
+    }
+    .navbar-nav{
+        margin: 100% 0 0 0;;
+     padding: 0;
+    } 
+  }
+
+//-----------------
+// RENDER
+//------------------
+
+#render-div {
+  text-align: center;
+
+  .render-box {
+    padding: 10px 5px;
+  }
+  a {
+    display: inline-block;
+    padding: 0 5px;
+  }
+}
+
+//-----------------
+// HEADER
+//-----------------
+
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .hero-content {
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba($color: $background-light, $alpha: 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: $primary;
+      text-align: left;
+    }
+    p {
+      font-size: 1.2rem;
+      color: $text;
+    }
+    a {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 10px 20px;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//-----------------
+// ABOUT
+//-----------------
+
+#about-div{
+    background-color: $background-light;
+    padding: 50px 0 0 25px;
+
+}
+
+//-----------------
+// PRODUCTS
+//-----------------
+
+#products-div{
+    background-color:$background;
+    padding: 50px 0 0 25px;
+    i{
+        color: #02b5ff;
+    }
+    ul{
+        padding: 0;
+    }
+    h3{
+        text-align: center;
+    }
+    button{
+        background-color: $primary;
+    }
+    strong{
+        color: $primary;
+    }
+
+}
