@@ -65,6 +65,11 @@
     <div id="header"></div>
     <div id="about"></div>
     <div id="products"></div>
+    <div class="cat1"></div>
+    <div id="advantages"></div>
+    <div class="clients"></div>
+    <div class="cat2"></div>
+    <div id="testimonials"></div>
     <br><br><br>
     <div id="navbar"></div>
 
@@ -102,6 +107,31 @@
             .then(response => response.text())
             .then(data5 => {
                 document.getElementById('products').innerHTML = data5;
+            });
+        fetch('cta1.html')
+            .then(response => response.text())
+            .then(data6 => {
+                document.querySelector('.cat1').innerHTML = data6;
+            });
+        fetch('advantages.html')
+            .then(response => response.text())
+            .then(data7 => {
+                document.getElementById('advantages').innerHTML = data7;
+            });
+        fetch('clients.html')
+            .then(response => response.text())
+            .then(data8 => {
+                document.querySelector('.clients').innerHTML = data8;
+            });
+        fetch('cta2.html')
+            .then(response => response.text())
+            .then(data9 => {
+                document.querySelector('.cat2').innerHTML = data9;
+            });
+        fetch('testimonials.html')
+            .then(response => response.text())
+            .then(data10 => {
+                document.getElementById('testimonials').innerHTML = data10;
             });
     </script>
 </body>

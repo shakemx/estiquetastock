@@ -1,42 +1,43 @@
 @font-face {
-  font-family: "Lato-Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../lato-regular.woff2) format("woff2"); }
+  font-family: "Garet-Bold";
+  src: local("Garet-Bold"), url("../fonts/Garet-Bold") format("opentype"); }
 @font-face {
-  font-family: "Lato-Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../lato-regular.woff2) format("woff2"); }
+  font-family: "Garet-Regular";
+  src: local("Garet-Regular"), url(../fonts/Garet-Regular.otf) format("opentype"); }
+@font-face {
+  font-family: "LumiosMarket";
+  src: local("LumiosMarket"), url(../fonts/LumiosMarker.otf) format("opentype"); }
 body {
-  font-family: "Lato-Regular", sans-serif;
+  font-family: "Garet-Regular", sans-serif;
   overflow-x: hidden;
-  background-color: #faf8ff;
+  background-color: #D9D9D9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 h1,
 h2,
 h3 {
-  font-family: "Lato-Bold", sans-serif;
-  color: #555555; }
+  font-family: "Garet-Bold", sans-serif;
+  color: #000000; }
 
 h4,
 h5,
 h6 {
-  font-family: "Lato-Regular", sans-serif;
-  color: #555555; }
+  font-family: "Garet-Regular", sans-serif;
+  color: #000000; }
 
 p {
-  font-family: "Lato-Light", sans-serif;
-  color: #555555;
+  font-family: "Garet-Regular", sans-serif;
+  color: #000000;
   line-height: 1.5;
   margin-bottom: 1.5rem; }
 
 a {
-  background-color: #0055b2;
-  color: #eee8a9;
+  font-family: "LumiosMarket";
+  background-color: #000;
+  color: #D9D9D9;
   text-decoration: none;
+  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
   border-radius: 5px; }
   a:hover {
@@ -46,7 +47,7 @@ ul {
   list-style: none; }
 
 .bg-primary {
-  background-color: #02b5ff !important;
+  background-color: #2EB1FF !important;
   color: #e8e8e8; }
 
 @media (max-width: 768px) {
@@ -54,7 +55,7 @@ ul {
     padding: 8px 16px;
     font-size: 0.9rem; } }
 .bg-nav {
-  background-color: rgba(230, 244, 241, 0.8); }
+  background-color: rgba(217, 217, 217, 0.8); }
 
 .img-nav {
   height: 100px;
@@ -62,9 +63,11 @@ ul {
 
 .nav-link {
   font-size: x-large;
-  color: #02b5ff !important;
+  color: #2EB1FF !important;
   margin-left: 13rem;
   text-shadow: 1px 1px 1px white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: transparent !important; }
 
@@ -74,7 +77,8 @@ ul {
   background-image: url("../images/open.png") !important;
   -webkit-animation: menu-show 0.5s ease 0s 1 !important;
   animation: menu-show 0.5s ease 0s 1 !important;
-  animation-fill-mode: forwards !important; }
+  -webkit-animation-fill-mode: forwards !important;
+          animation-fill-mode: forwards !important; }
 
 @keyframes menu-show {
   to {
@@ -96,7 +100,8 @@ ul {
   background-image: url("../images/close.png") !important;
   -webkit-animation: menu-hide 0.5s ease 0s 1 !important;
   animation: menu-hide 0.5s ease 0s 1 !important;
-  animation-fill-mode: forwards !important; }
+  -webkit-animation-fill-mode: forwards !important;
+          animation-fill-mode: forwards !important; }
 
 @keyframes menu-hide {
   to {
@@ -128,12 +133,14 @@ ul {
 .navbar-toggler:focus {
   border-color: transparent !important;
   border: none !important;
-  box-shadow: transparent !important; }
+  -webkit-box-shadow: transparent !important;
+          box-shadow: transparent !important; }
 
 .showNav {
   -webkit-animation: collapser-show 0.5s ease-in-out 0s 1;
   animation: collapser-show 0.5s ease-in-out 0s 1;
-  animation-fill-mode: forwards; }
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
 
 @keyframes collapser-show {
   to {
@@ -148,8 +155,10 @@ ul {
 .hideNav {
   -webkit-animation: collapser-hide 0.5s ease 0s 1 normal;
   animation: collapser-hide 0.5s ease 0s 1 normal;
-  animation-fill-mode: forwards;
-  backdrop-filter: saturate(180%) blur(20px); }
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px); }
 
 @keyframes collapser-hide {
   to {
@@ -185,16 +194,23 @@ ul {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: left;
-  align-items: center; }
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   #hero .hero-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: -1; }
   #hero .hero-content {
     z-index: 1;
@@ -203,15 +219,16 @@ ul {
     margin: 10px;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
     #hero .hero-content h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-      color: #02b5ff;
+      color: #2EB1FF;
       text-align: left; }
     #hero .hero-content p {
       font-size: 1.2rem;
-      color: #555555; }
+      color: #000000; }
     #hero .hero-content a {
       display: inline-block;
       margin-top: 5px;
@@ -228,7 +245,7 @@ ul {
   padding: 50px 0 0 25px; }
 
 #products-div {
-  background-color: #faf8ff;
+  background-color: #D9D9D9;
   padding: 50px 0 0 25px; }
   #products-div i {
     color: #02b5ff; }
@@ -237,8 +254,48 @@ ul {
   #products-div h3 {
     text-align: center; }
   #products-div button {
-    background-color: #02b5ff; }
+    background-color: #2EB1FF; }
   #products-div strong {
-    color: #02b5ff; }
+    color: #2EB1FF; }
+
+#cta1-div {
+  background-color: #fff;
+  padding: 150px 0; }
+  #cta1-div a {
+    background-color: #2EB1FF;
+    color: #e8e8e8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; }
+    #cta1-div a:hover {
+      background-color: #009dfa; }
+
+#advantages-div {
+  background-color: #D9D9D9;
+  padding: 50px 0 0 25px; }
+
+#clients-div {
+  background-color: #fff;
+  padding: 50px 0 0 25px; }
+
+#cta2-div {
+  background-color: #fff;
+  padding: 0 0 100px 25px; }
+  #cta2-div a {
+    background-color: #2EB1FF;
+    color: #e8e8e8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; }
+    #cta2-div a:hover {
+      background-color: #009dfa; }
+  #cta2-div h5 {
+    color: #2EB1FF; }
+
+#testimonials-div {
+  background-color: #D9D9D9;
+  padding: 50px 0 0 25px; }
 
 /*# sourceMappingURL=style.css.map */
