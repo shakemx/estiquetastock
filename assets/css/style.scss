@@ -430,5 +430,72 @@ margin: auto;
 #testimonials-div{
   background-color:$background;
   padding: 50px 0 0 25px;
- 
+  h3{
+    color: $primary;
+  }
+  .square{
+    border-radius: 90px 0px 90px 90px;
+    height: 425px;
+    background-color: $background-light;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .carousel-indicators [data-bs-target] {
+    background-color: $primary;
+  }
+   @media only screen and (max-width: 768px) {
+    .testimonios {
+      height: auto;
+    }
+  }
+}
+
+//-----------------
+// Footer
+//-----------------
+
+#footer-div{
+  background-color:$primary;
+  padding: 50px 0 50px 0;
+  a{
+    color: $text-light;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+      color: darken($text-light, 10%);
+    }
+  }
+  h3{
+    color:$text-light;
+  }   
+  a{
+    margin-top: 5px;
+      padding: 10px 20px;
+  }
+}
+
+//-----------------
+// Floating
+//-----------------
+
+#floating-div{
+  position: fixed;
+    right: 2%;
+    bottom: 50%;
+    z-index: 9999;;
+.div-flotante {
+    text-align: center;
+    background-color: rgb(40, 209, 70);
+    box-shadow: rgba(22, 22, 26, 0.18) 2px 6px 8px 0px;
+    max-width: 120px !important;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+}
+.div-flotante:hover {
+  transform: scale(1.1);
+  background-color: rgb(40, 209, 70);
+}
+a{
+  color: none !important;
+  background-color: transparent !important;
+}
 }
