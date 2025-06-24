@@ -37,13 +37,11 @@ a {
   background-color: #2eb1ff;
   color: #d9d9d9;
   text-decoration: none;
-  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   border-radius: 5px; }
   a:hover {
     color: #cfcfcf;
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05); }
+    transform: scale(1.05); }
 
 ul {
   list-style: none; }
@@ -69,8 +67,6 @@ ul {
   color: #2eb1ff !important;
   margin-left: 13rem;
   text-shadow: 1px 1px 1px white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   background-color: transparent !important; }
 
@@ -80,8 +76,7 @@ ul {
   background-image: url("../images/open.png") !important;
   -webkit-animation: menu-show 0.5s ease 0s 1 !important;
   animation: menu-show 0.5s ease 0s 1 !important;
-  -webkit-animation-fill-mode: forwards !important;
-          animation-fill-mode: forwards !important; }
+  animation-fill-mode: forwards !important; }
 
 @keyframes menu-show {
   to {
@@ -103,8 +98,7 @@ ul {
   background-image: url("../images/close.png") !important;
   -webkit-animation: menu-hide 0.5s ease 0s 1 !important;
   animation: menu-hide 0.5s ease 0s 1 !important;
-  -webkit-animation-fill-mode: forwards !important;
-          animation-fill-mode: forwards !important; }
+  animation-fill-mode: forwards !important; }
 
 @keyframes menu-hide {
   to {
@@ -136,14 +130,12 @@ ul {
 .navbar-toggler:focus {
   border-color: transparent !important;
   border: none !important;
-  -webkit-box-shadow: transparent !important;
-          box-shadow: transparent !important; }
+  box-shadow: transparent !important; }
 
 .showNav {
   -webkit-animation: collapser-show 0.5s ease-in-out 0s 1;
   animation: collapser-show 0.5s ease-in-out 0s 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
+  animation-fill-mode: forwards; }
 
 @keyframes collapser-show {
   to {
@@ -158,10 +150,8 @@ ul {
 .hideNav {
   -webkit-animation: collapser-hide 0.5s ease 0s 1 normal;
   animation: collapser-hide 0.5s ease 0s 1 normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-          backdrop-filter: saturate(180%) blur(20px); }
+  animation-fill-mode: forwards;
+  backdrop-filter: saturate(180%) blur(20px); }
 
 @keyframes collapser-hide {
   to {
@@ -197,23 +187,16 @@ ul {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  justify-content: center;
+  align-items: center; }
   #hero .hero-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     z-index: -1; }
   #hero .hero-content {
     z-index: 1;
@@ -222,8 +205,7 @@ ul {
     margin: 10px;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 90px;
-    -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
     #hero .hero-content h1 {
       font-size: 3rem;
       margin-bottom: 20px;
@@ -241,8 +223,7 @@ ul {
       padding: 20px;
       width: 80%;
       background-color: transparent;
-      -webkit-box-shadow: none;
-              box-shadow: none; }
+      box-shadow: none; }
       #hero .hero-content h1 {
         font-size: 1.5rem;
         text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); }
@@ -279,12 +260,10 @@ ul {
     color: #e8e8e8;
     padding: 10px 20px;
     border-radius: 5px;
-    -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease; }
     #cta1-div a:hover {
       background-color: #009dfa;
-      -webkit-transform: scale(1.05);
-              transform: scale(1.05); }
+      transform: scale(1.05); }
 
 #advantages-div {
   background-color: #d9d9d9;
@@ -306,7 +285,6 @@ ul {
     color: #e8e8e8;
     padding: 10px 20px;
     border-radius: 5px;
-    -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease; }
     #cta2-div a:hover {
       background-color: #009dfa; }
@@ -326,8 +304,7 @@ ul {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
   #testimonials-div .carousel-indicators [data-bs-target] {
     background-color: #2eb1ff; }
   @media only screen and (max-width: 768px) {
@@ -342,14 +319,12 @@ ul {
   #footer-div a {
     color: #e8e8e8;
     text-decoration: none;
-    -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
     margin-top: 5px;
     padding: 10px 20px; }
     #footer-div a:hover {
       color: #cfcfcf;
-      -webkit-transform: scale(1.05);
-              transform: scale(1.05); }
+      transform: scale(1.05); }
   #footer-div h3 {
     color: #e8e8e8; }
   @media only screen and (max-width: 768px) {
@@ -362,21 +337,13 @@ ul {
   bottom: 25%;
   z-index: 9999; }
   #floating-div .div-flotante {
-    -webkit-box-shadow: rgba(22, 22, 26, 0.18) 2px 6px 8px 0px;
-            box-shadow: rgba(22, 22, 26, 0.18) 2px 6px 8px 0px;
+    box-shadow: rgba(22, 22, 26, 0.18) 2px 6px 8px 0px;
     width: 50px !important;
     height: 50px !important;
     border-radius: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
     transition: 0.5s ease-in-out; }
   #floating-div .whatsapp {
     background-color: #28d146; }
@@ -387,12 +354,12 @@ ul {
   #floating-div .delivery {
     background-color: #2eb1ff; }
   #floating-div .div-flotante:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
+    transform: scale(1.1); }
   #floating-div a {
     color: none !important;
     background-color: transparent !important; }
   @media only screen and (max-width: 768px) {
     #floating-div {
       right: 5%; } }
+
 /*# sourceMappingURL=style.css.map */
